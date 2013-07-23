@@ -1,6 +1,10 @@
+create:
+	cp template.html ${TITLE}.html
+	sed -i '' -e 's/$${TITLE}/\${TITLE}/g' -e 's/$${ANSWER}/\${ANSWER}/g' ${TITLE}.html
+
 publish:
 	git checkout gh-pages
-	git merge origin/master
+	git merge origin/gh-pages
 	git push origin gh-pages
 
 # target: start - Start Jekyll server
