@@ -1,6 +1,8 @@
 create:
 	cp template.html ${TITLE}.html
 	sed -i '' -e 's/$${TITLE}/\${TITLE}/g' -e 's/$${ANSWER}/\${ANSWER}/g' ${TITLE}.html
+	git add ${TITLE}.html
+	git ci "${TITLE}"
 
 publish:
 	git checkout gh-pages
