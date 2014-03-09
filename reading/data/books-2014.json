@@ -1,0 +1,8 @@
+[
+    {"start_date": "2014-01-01", "end_date": "2014-01-05", "language": "fr", "year": 1982, "pages": 277, "title": "La tempête", "author": "René Barjavel"},
+    {"start_date": "2014-01-06", "end_date": "2014-01-10", "language": "fr", "year": 2013, "pages": 426, "title": "Les micro humains", "author": "Bernard Werber"},
+    {"start_date": "2014-01-11", "end_date": "2014-01-20", "language": "en", "year": 2013, "pages": 491, "title": "The Circle", "author": "Dave Eggers"},
+    {"start_date": "2014-01-21", "end_date": "2014-01-31", "language": "fr", "year": 1943, "pages": 97, "title": "Le petit prince", "author": "Antoine de Saint-Exupéry"},
+    {"start_date": "2014-02-01", "end_date": "2014-02-10", "language": "fr", "year": 1957, "pages": 183, "title": "L'étranger", "author": "Albert Camus"},
+    {"start_date": "2014-02-11", "end_date": "2014-03-08", "language": "en", "year": 1949, "pages": 245, "title": "1984", "author": "Georges Orwell"}
+]
