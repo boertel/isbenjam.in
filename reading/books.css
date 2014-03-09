@@ -41,11 +41,12 @@ span.amp {
   color: #ffffff;
 }
 #content {
-  width: 1200px;
-  margin: 0 auto;
+    width: 1200px;
+    margin: 0 auto;
 }
 #chart-book {
-  text-align: center;
+    text-align: center;
+    height: 270px;
 }
 #chart-numbers {
   overflow: hidden;
