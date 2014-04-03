@@ -203,11 +203,20 @@ d3.json("./data/books-2014.json", function (books) {
 
             pages.mouseover(d);
         })
+
+    d3.select("#book-wrapper")
+        .on("mouseleave", function () {
+            d3.select("#placeholder").style("display", "block");
+            d3.select("#book-detail").html("")
+            pages.mouseout();
+        })
+    /*
     d3.select("body").on("click", function () {
         d3.select("#placeholder").style("display", "block");
         d3.select("#book-detail").html("")
         pages.mouseout();
     });
+    */
 });
 
 var margin = {
