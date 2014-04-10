@@ -1,8 +1,11 @@
 var formats = {
     date: d3.time.format("%Y-%m-%d").parse
-}; +
+};
+
+window.books;
 
 d3.json("./data/books-2014.json", function (books) {
+    window.books = books;
     books.forEach(function (d) {
         d.start_date = formats.date(d.start_date);
         d.end_date = formats.date(d.end_date);
@@ -61,7 +64,7 @@ d3.json("./data/books-2014.json", function (books) {
         .attr("transform", "translate(" + padding.left + ", " + (padding.top + 1) + ")")
         .attr("class", "bars")
         .selectAll(".bars")
-        .data(books)
+        .data(window.books)
       .enter()
         .append("g")
         .attr("transform", function (d) { return "translate(" + x(d.start_date) + ", 0)"; })
@@ -190,6 +193,8 @@ d3.json("./data/books-2014.json", function (books) {
 
     var pages = new Pages();
 
+    var clicked = false;
+
     d3.selectAll(".book")
         .on("mouseover", function (d) {
             var book = d3.select(this);
@@ -203,20 +208,30 @@ d3.json("./data/books-2014.json", function (books) {
 
             pages.mouseover(d);
         })
+        .on("click", function () {
+            // disable the mouseleave and re-enable on the click on the body
+            clicked = true;
+            d3.event.stopPropagation()
+        });
 
-    d3.select("#book-wrapper")
-        .on("mouseleave", function () {
-            d3.select("#placeholder").style("display", "block");
-            d3.select("#book-detail").html("")
-            pages.mouseout();
-        })
-    /*
-    d3.select("body").on("click", function () {
+    function mouseout () {
         d3.select("#placeholder").style("display", "block");
         d3.select("#book-detail").html("")
         pages.mouseout();
-    });
-    */
+    }
+
+    d3.select("#book-wrapper")
+        .on("mouseleave", function () {
+            if (!clicked) {
+                mouseout();
+            }
+        })
+
+    d3.select("body")
+        .on("click", function () {
+            mouseout();
+            clicked = false;
+        });
 });
 
 var margin = {
