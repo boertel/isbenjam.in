@@ -7,5 +7,6 @@
     {"start_date": "2014-02-11", "end_date": "2014-03-08", "language": "en", "year": 1949, "pages": 245, "title": "1984", "author": "Georges Orwell"},
     {"start_date": "2014-03-09", "end_date": "2014-03-10", "language": "fr", "year": 1958, "pages": 243, "title": "Le lion", "author": "Joseph Kessel"},
     {"start_date": "2014-03-11", "end_date": "2014-04-02", "language": "fr", "year": 1943, "pages": 244, "title": "Le Voyageur imprudent", "author": "René Barjavel"},
-    {"start_date": "2014-04-03", "end_date": "2014-04-09", "language": "en", "year": 1995, "pages": 263, "title": "Ishmael", "author": "Daniel Quinn"}
+    {"start_date": "2014-04-03", "end_date": "2014-04-09", "language": "en", "year": 1995, "pages": 263, "title": "Ishmael", "author": "Daniel Quinn"},
+    {"start_date": "2014-04-10", "end_date": "2014-05-12", "language": "en", "year": 1989, "pages": 1076, "title": "The Pillars of the Earth", "author": "Ken Follett"}
 ]
